@@ -73,7 +73,8 @@ Our system's distinctiveness lies in its **multi-modal, temporally-aware pipelin
 
 Rather than treating each video frame in isolation like conventional object detectors, we employ a **Bidirectional GRU network** that processes a rolling window of frame features extracted by a quantized MobileNetV2 backbone. This enables the system to reason across time — detecting not just *what* is present in a scene, but *how it is evolving*, capturing forward-evolving threats like a crossing motorcyclist and backward-traceable precursors like sudden braking ahead.
 
-A key innovation is the **Dynamic Risk Threshold** driven by a DistilBERT-encoded road context. Rather than applying a fixed alarm trigger, the system adjusts its sensitivity in real time based on textual annotations of traffic density, weather, and road type — suppressing false alarms on open highways while heightening vigilance in dense urban intersections.
+A key innovation is the **Dynamic Risk Th
+reshold** driven by a DistilBERT-encoded road context. Rather than applying a fixed alarm trigger, the system adjusts its sensitivity in real time based on textual annotations of traffic density, weather, and road type — suppressing false alarms on open highways while heightening vigilance in dense urban intersections.
 
 Finally, **MiDaS monocular depth estimation** converts 2D detection bounding boxes into approximate 3D metric distances, enabling spatially precise alerts like *"pedestrian ~2.1 m ahead"* — directly actionable by a driver or autonomous braking controller — overcoming the fundamental limitation of flat image-space detection.
 
